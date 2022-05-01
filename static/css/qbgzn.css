@@ -1,0 +1,280 @@
+body{
+	font-size: 12px;
+	color: black;
+	position: absolute;
+	left: 45px;
+	top: 50px;
+	font-family: sans-serif;
+	width: 1340px;
+	height: 750px;
+}
+#title{
+	width: 170px;
+}
+#arknights{
+	width: 170px;
+	font-weight: bold;
+	font-size: 10px;
+}
+#hts{
+	margin-top: 50px;
+}
+#nig{
+	margin-top: 50px;
+}
+.a{
+	margin-left: 48px;
+}
+.n{
+	margin-left: 48px;
+}
+.h{
+	margin-left: 48px;
+}
+#rhodesIsland{
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+#video{
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 15px
+}
+#n2{
+	margin-left: 50px;
+}
+#n3{
+	margin-left: 50px;
+	text-decoration: underline skyblue;
+}
+.PVTitle{
+	margin-left: 27px;
+	font-weight: normal;
+	font-size: 12px;
+}
+.bgm{
+	display: block;
+	margin-left: 225px;
+	font-weight: normal;
+	font-size: 12px;
+}
+#xia{
+	margin-top: 50px;
+}
+#saoma{
+	display: inline-block;
+	width: 141px;
+	height: 123px;
+}
+#xiazai{
+	display: inline-block;
+	margin-left: 20px;
+	width: 250px;
+	height: 123px;
+}
+#s{
+	margin-top: 111px;
+}
+#m{
+	margin-top: 111px;
+	margin-left: 27px;
+}
+#x{
+	margin-top: 111px;
+	margin-left: 27px;
+}
+#z{
+	margin-top: 111px;
+	margin-left: 27px;
+}
+#space{
+	height: 120px;
+}
+
+#right{
+	display: inline-block;
+	position: fixed;
+	top: 30px;
+	z-index: 99999999999999999;
+}
+
+#fenxiang:hover{
+	background-color: black;
+}
+#page{
+	position: fixed;
+	left: 1300px;
+}
+.pg{
+	font-family: "SansRegular";
+	display: block;
+	width: 50px;
+	text-align: right;
+	margin-top: 85px;
+	font-size: 13px;
+}
+.sy{
+	color: red;
+	margin-top: 150px
+}
+.sy:hover{
+	position: relative;
+	top: 0px;
+	color: red;
+	text-align: left;
+	width: 9999px;
+}
+.qb:hover{
+	position: relative;
+	top: 0px;
+	color: red;
+	text-align: left;
+	width: 9999px;
+}
+.gy:hover{
+	position: relative;
+	top: 0px;
+	color: red;
+	text-align: left;
+	width: 9999px;
+}
+.sd:hover{
+	position: relative;
+	top: 0px;
+	color: red;
+	text-align: left;
+	width: 9999px;
+}
+.da:hover{
+	position: relative;
+	top: 0px;
+	color: red;
+	text-align: left;
+	width: 9999px;
+}
+#pgNum{
+	color: rgb(4, 253, 8);
+	font-family: "Bender";
+	margin-top: 170px
+}
+#leftOne{
+	position: absolute;
+	z-index: 4444;
+}
+.left{
+	position: absolute;
+	width: 1340px;
+	height: 800px;
+}
+#information{
+	font-family: "SansMedium";
+	width: 596.75px;
+	height: 24.75px;
+}
+ol{
+	list-style: none;
+	text-align: right;
+}
+.infmt{
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+}
+#zx{
+	color: red;
+}
+#photoList{
+	overflow: hidden;
+	width: 597px;
+	height: 154px;
+	text-align: left;
+	position: absolute;
+}
+
+.pL{
+	display: inline-block;
+}
+.photo{
+	display: inline-block;
+	width: 597px;
+	height: 154px;
+}
+#p1{
+	position: absolute;
+}
+#p2{
+	left: 637px;
+	position: absolute;
+}
+#p3{
+	left: 1234px;
+	position: absolute;
+}
+#p4{
+	left: 1831px;
+	position: absolute;
+}
+.readMore{
+	display: inline-block;
+	color: #5191c1;
+	background-color: skyblue;
+	text-align: right;
+	position:relative;
+	left: -500px;
+	font-size: 10px;
+}
+.eventType{
+	color: green;
+	margin-left: 50px;
+}
+.eventThing{
+	margin-left: 20px;
+}
+#activities{
+	position: absolute;
+	left: 0px;
+	top: 250px;
+	text-align: left;
+}
+.event{
+	display: block;
+	text-align: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-bottom: gray solid 2px;
+	font-size: 15px;
+}
+#more{
+	width: 130px;
+	height: 30.8px;
+	text-align: center;
+	padding-top: 18px;
+	border: solid white 2px;
+	position: absolute;
+	left: 50px;
+	margin-top: 100px;
+	font-size: 17px;
+	color: white;
+}
+#more:hover{
+	color: skyblue;
+	border: solid skyblue;
+}
+.dangan{
+	position: relative;
+	display: inline-block;
+	left: -160px;
+	margin-left: 80px;
+	height: 200px;
+	width: 160px;
+	margin-top: 150px;
+	background: no-repeat;
+}
+.firstLine{
+	margin-top: 0px;
+	
+}
+.firstLie{
+	margin-left: 20px;
+}
