@@ -97,7 +97,7 @@ saoma.onclick=function(){
 	};
 };
 var pg=document.getElementsByClassName("pg");
-var pgList=["首页","公告","档案","介绍","？？"];
+var pgList=["首页","公告","档案","萌娘百科","鸣谢"];
 var pN=document.getElementById("pN");
 var pG=document.getElementById("pG");
 var left=document.getElementsByClassName("left");

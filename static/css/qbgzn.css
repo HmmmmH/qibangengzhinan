@@ -104,12 +104,12 @@ body{
 }
 #page{
 	position: fixed;
-	left: 1300px;
+	left: 1250px;
 }
 .pg{
 	font-family: "SansRegular";
 	display: block;
-	width: 50px;
+	width: 70px;
 	text-align: right;
 	margin-top: 85px;
 	font-size: 13px;
@@ -253,7 +253,7 @@ ol{
 	border: solid white 2px;
 	position: absolute;
 	left: 50px;
-	margin-top: 100px;
+	margin-top: 90px;
 	font-size: 17px;
 	color: white;
 }
@@ -285,8 +285,8 @@ ol{
 	background: url(../img/dangan2.png) no-repeat;
 }
 #dangan3{
-	background: url(../img/dangan2.png) no-repeat;
+	background: url(../img/dangan3.png) no-repeat;
 }
 #dangan4{
-	background: url(../img/dangan2.png) no-repeat;
+	background: url(../img/dangan4.png) no-repeat;
 }
