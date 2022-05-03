@@ -271,6 +271,16 @@ ol{
 	margin-top: 150px;
 	background: no-repeat;
 }
+.renwu{
+	position: relative;
+	display: inline-block;
+	left: -160px;
+	margin-left: 80px;
+	height: 200px;
+	width: 160px;
+	margin-top: 150px;
+	background: no-repeat;
+}
 .firstLine{
 	margin-top: 0px;
 	
@@ -289,4 +299,17 @@ ol{
 }
 #dangan4{
 	background: url(../img/dangan4.png) no-repeat;
+}
+.jutidejieshao{
+	display: none;
+	width: 1460px;
+	height: 912px;
+	background-color: white;
+	position: fixed;
+	left: 45px;
+	top: 50px;
+}
+#guanbi{
+	position: relative;
+	left: 1210px;
 }

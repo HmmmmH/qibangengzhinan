@@ -320,3 +320,36 @@ eve[5].onmouseout=function(){
 	  	rm[5].style.left="-500px";
 	};
 };
+var juti=document.getElementsByClassName("jutijieshao");
+var dangan=document.getElementsByClassName("dangan");
+var renwu=document.getElementsByClassName("renwu");
+var gaunbi=document.getElementsById("guanbi");
+var xhao=[]
+var sji=[]
+for (var i=1; i < 48; i++) {
+  xhao.append(document.getElementById("hao"+i));
+  sji.append(document.getElementById("shi"+i))
+};
+dangan.onclick=function(){
+	for (var i=0; i < xhao.length; i++) {
+	  	xhao[i].onclick=function(){
+	  		jtjsxh(i)
+		}
+	};
+};
+renwu.onclick=function(){
+	for (var i=0; i < xhao.length; i++) {
+	  	sji[i].onclick=function(){
+	  		jtjssj(i)
+		}
+	};
+};
+function jtjsxh (chickNumber) {
+	xuehao[chickNumber].style.display="block";
+};
+function jtjssj (chickNumber) {
+	shiji[chickNumber].style.display="block";
+};
+guanbi.onclick=function(){
+	juti.style.display="none"
+}
