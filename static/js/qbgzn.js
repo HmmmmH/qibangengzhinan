@@ -324,12 +324,8 @@ var juti=document.getElementsByClassName("jutijieshao");
 var dangan=document.getElementsByClassName("dangan");
 var renwu=document.getElementsByClassName("renwu");
 var gaunbi=document.getElementById("guanbi");
-var xhao=[]
-var sji=[]
-for (var i=1; i < 48; i++) {
-  xhao.append(document.getElementById("hao"+i));
-  sji.append(document.getElementById("shi"+i))
-};
+var xhao=document.getElementsByClassName("hao");
+var sji=document.getElementsByClassName("shi");
 dangan.onclick=function(){
 	for (var i=0; i < xhao.length; i++) {
 	  	xhao[i].onclick=function(){
