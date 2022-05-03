@@ -358,8 +358,7 @@ window.onclick=function(e){
 				juti[i].style.display="none";
 			};
 		};
-	}else if (eC[0]=="event"){s
-		alert("点什么点，我懒得做了，这里不会有东西的")
-		};
+	}else if (eC[0]=="event"){
+		alert("点什么点，我懒得做了，这里不会有东西的");
 	};
 };
