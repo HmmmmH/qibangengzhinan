@@ -81,17 +81,17 @@ var num=0;
 saoma.onclick=function(){
 	num+=1;
 	if (num%2==1) {
-		saoma.style.backgroundImage="url(../static/img/ri.png)";
+		saoma.style.backgroundImage="url(static/img/ri.png)";
 		s.innerHTML="不";
 		m.innerHTML="要";
 		xiazai.style.backgroundImage="url()";
 		xiazai.style.width="0px";
 		xiazai.style.height="0px";
 	} else{
-		saoma.style.backgroundImage="url(../static/img/erweima.png)";
+		saoma.style.backgroundImage="url(static/img/erweima.png)";
 		s.innerHTML="不";
 		m.innerHTML="用";
-		xiazai.style.backgroundImage="url(../static/img/xiazai.png)";
+		xiazai.style.backgroundImage="url(static/img/xiazai.png)";
 		xiazai.style.width="250px";
 		xiazai.style.height="123px";
 	};
