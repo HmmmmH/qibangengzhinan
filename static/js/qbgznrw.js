@@ -32,4 +32,5 @@ window.onclick=function(e){
 				juti[i].style.display="none";
 			};
 		};
+	};
 };
