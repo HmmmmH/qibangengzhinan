@@ -16,7 +16,6 @@ window.onclick=function(e){
 		var xhao=document.getElementsByClassName("hao");
 		xhao[eNum].style.display="block";
 	}else if (eI[0]=="d"&&eI[1]=="a"&&eI[2]=="n") {
-		right.style.zIndex="0";
 		var eIS="";
 		for (var i=0; i < eI.length; i++) {
 			if (i>=6) {
