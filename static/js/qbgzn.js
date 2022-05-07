@@ -101,10 +101,13 @@ var pgList=["首页","公告","档案","萌娘百科","鸣谢"];
 var pN=document.getElementById("pN");
 var pG=document.getElementById("pG");
 var left=document.getElementsByClassName("left");
+pg[0].onmouseover=function(){
+	pg[0].style.removeProperty('color');
+}
 pg[0].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
 		pg[j].innerHTML=pgList[j];
-		pg[j].style.color="black";
+		pg[j].style.removeProperty('color');
   	};
   	pg[0].innerHTML+="▎";
 	pg[0].style.color="red";
@@ -118,7 +121,8 @@ pg[0].onclick=function(){
 pg[1].onclick=function(){
 	for (var j=0; j < pg.length; j++){ 
 		pg[j].innerHTML=pgList[j];
-		pg[j].style.color="black";
+		pg[j].style.removeProperty('color');
+		pg[0].style.color='black';
   	};
   	pg[1].innerHTML+=" ▎";
 	pg[1].style.color="red";
@@ -132,7 +136,8 @@ pg[1].onclick=function(){
 pg[2].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
 		pg[j].innerHTML=pgList[j];
-		pg[j].style.color="black";
+		pg[j].style.removeProperty('color');
+		pg[0].style.color='black';
   	};
 	pg[2].innerHTML+=" ▎";
 	pg[2].style.color="red";
@@ -146,7 +151,8 @@ pg[2].onclick=function(){
 pg[3].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
 		pg[j].innerHTML=pgList[j];
-		pg[j].style.color="black";
+		pg[j].style.removeProperty('color');
+		pg[0].style.color='black';
   	};
   	pg[3].innerHTML+=" ▎";
 	pg[3].style.color="red";
@@ -160,7 +166,8 @@ pg[3].onclick=function(){
 pg[4].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
 		pg[j].innerHTML=pgList[j];
-		pg[j].style.color="black";
+		pg[j].style.removeProperty('color');
+		pg[0].style.color='black';
   	};
   	pg[4].innerHTML+=" ▎";
 	pg[4].style.color="red";

@@ -318,3 +318,12 @@ ol{
 #leftFive{
 	font-size: 25px;
 }
+#rhodesIsland{
+	width: 425px;
+}
+*{
+	transition: all 2s;
+}
+#rhodesIsland:hover{
+	transform: rotate(100000000000000270deg);
+}
