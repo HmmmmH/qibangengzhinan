@@ -374,25 +374,25 @@ window.onclick=function(e){
 			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
-			eventBlock[0].className="eventNone"
+			eventBlock[0].className="eventBlock"
 		};
 		infmt[1].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
-			eventBlock[1].className="eventNone"
+			eventBlock[1].className="eventBlock"
 		};
 		infmt[2].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
-			eventBlock[2].className="eventNone"
+			eventBlock[2].className="eventBlock"
 		};
 		infmt[3].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
-			eventBlock[3].className="eventNone"
+			eventBlock[3].className="eventBlock"
 		};
 	};
 };
