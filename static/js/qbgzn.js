@@ -178,6 +178,7 @@ pg[4].onclick=function(){
 	};
 	left[4].style.zIndex="4444";
 };
+
 var infmt=document.getElementsByClassName("infmt");
 infmt[0].onclick=function(){
 	for (var i=0; i < infmt.length; i++) {
@@ -332,6 +333,7 @@ var dangan=document.getElementsByClassName("dangan");
 var renwu=document.getElementsByClassName("renwu");
 var guanbi=document.getElementsByClassName("guanbi");
 var right=document.getElementById("right");
+var eventBlock=document.getElementById("eventBlock");
 window.onclick=function(e){
 	var element=document.elementFromPoint(e.clientX,e.clientY);
 	var eI=element.id;
@@ -367,5 +369,32 @@ window.onclick=function(e){
 		};
 	}else if (eC[0]=="event"){
 		alert("点什么点，我懒得做了，这里不会有东西的");
-	};
+	}else if (eC[0]=='infmt'){
+		infmt[0].onclick=function(){
+	for (var i=0; i < infmt.length; i++) {
+	  	infmt[0].onclick=function(){
+			for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[1].style.color="red"
+		};
+		infmt[1].onclick=function(){
+			for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[1].style.color="red"
+		};
+		infmt[2].onclick=function(){
+			for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[2].style.color="red"
+		};
+		infmt[3].onclick=function(){
+			for (var i=0; i < infmt.length; i++) {
+			  eventBlock[i].className="eventNone eventBlock"
+			};
+			eventBlock[3].className="eventNone"
+		};
+	}
 };
