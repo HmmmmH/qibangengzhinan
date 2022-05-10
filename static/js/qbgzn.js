@@ -370,25 +370,23 @@ window.onclick=function(e){
 	}else if (eC[0]=="event"){
 		alert("点什么点，我懒得做了，这里不会有东西的");
 	}else if (eC[0]=='infmt'){
-		infmt[0].onclick=function(){
-	for (var i=0; i < infmt.length; i++) {
 	  	infmt[0].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
-			  infmt[i].style.color="black"
+			  eventBlock[i].className="eventNone eventBlock"
 			};
-			infmt[1].style.color="red"
+			eventBlock[0].className="eventNone"
 		};
 		infmt[1].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
-			  infmt[i].style.color="black"
+			  eventBlock[i].className="eventNone eventBlock"
 			};
-			infmt[1].style.color="red"
+			eventBlock[1].className="eventNone"
 		};
 		infmt[2].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
-			  infmt[i].style.color="black"
+			  eventBlock[i].className="eventNone eventBlock"
 			};
-			infmt[2].style.color="red"
+			eventBlock[2].className="eventNone"
 		};
 		infmt[3].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
@@ -396,5 +394,5 @@ window.onclick=function(e){
 			};
 			eventBlock[3].className="eventNone"
 		};
-	}
+	};
 };
