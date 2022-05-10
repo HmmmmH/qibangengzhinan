@@ -328,5 +328,5 @@ ol{
 	transform: rotate(100000000000000270deg);
 }
 .eventNone{
-	display: none
+	display: none !important
 }
