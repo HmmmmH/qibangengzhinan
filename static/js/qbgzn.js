@@ -180,30 +180,6 @@ pg[4].onclick=function(){
 };
 
 var infmt=document.getElementsByClassName("infmt");
-infmt[0].onclick=function(){
-	for (var i=0; i < infmt.length; i++) {
-	  infmt[i].style.color="black"
-	};
-	infmt[0].style.color="red"
-};
-infmt[1].onclick=function(){
-	for (var i=0; i < infmt.length; i++) {
-	  infmt[i].style.color="black"
-	};
-	infmt[1].style.color="red"
-};
-infmt[2].onclick=function(){
-	for (var i=0; i < infmt.length; i++) {
-	  infmt[i].style.color="black"
-	};
-	infmt[2].style.color="red"
-};
-infmt[3].onclick=function(){
-	for (var i=0; i < infmt.length; i++) {
-	  infmt[i].style.color="black"
-	};
-	infmt[3].style.color="red"
-};
 
 
 var photo1=document.getElementById("p1");
@@ -256,84 +232,16 @@ setInterval(function(){
 
 var eve=document.getElementsByClassName("event");
 var rm=document.getElementsByClassName("readMore");
-eve[0].onmouseover=function(){
-	for (var i=0; i < 10; i++) {
-	  	rm[0].style.color="black";
-	  	rm[0].style.left="0px";
-	};
-};
-eve[1].onmouseover=function(){
-	for (var i=0; i < 10; i++) {
-	  	rm[1].style.color="black";
-	  	rm[1].style.left="0px";
-	};
-};
-eve[2].onmouseover=function(){
-	for (var i=0; i < 10; i++) {
-	  	rm[2].style.color="black";
-	  	rm[2].style.left="0px";
-	};
-};
-eve[3].onmouseover=function(){
-	for (var i=0; i < 10; i++) {
-	  	rm[3].style.color="black";
-	  	rm[3].style.left="0px";
-	};
-};
-eve[4].onmouseover=function(){
-	for (var i=0; i < 10; i++) {
-	  	rm[4].style.color="black";
-	  	rm[4].style.left="0px";
-	};
-};
-eve[5].onmouseover=function(){
-	for (var i=0; i < 10; i++) {
-	  	rm[5].style.color="black";
-	  	rm[5].style.left="0px";
-	};
-};
-eve[0].onmouseout=function(){
-	for (var i=9; i >= 0; i-=1) {
-	  	rm[0].style.color="#5191c1";
-	  	rm[0].style.left="-500px";
-	};
-};
-eve[1].onmouseout=function(){
-	for (var i=9; i >= 0; i-=1) {
-	  	rm[1].style.color="#5191c1";
-	  	rm[1].style.left="-500px";
-	};
-};
-eve[2].onmouseout=function(){
-	for (var i=9; i >= 0; i-=1) {
-	  	rm[2].style.color="#5191c1";
-	  	rm[2].style.left="-500px";
-	};
-};
-eve[3].onmouseout=function(){
-	for (var i=9; i >= 0; i-=1) {
-	  	rm[3].style.color="#5191c1";
-	  	rm[3].style.left="-500px";
-	};
-};
-eve[4].onmouseout=function(){
-	for (var i=9; i >= 0; i-=1) {
-	  	rm[4].style.color="#5191c1";
-	  	rm[4].style.left="-500px";
-	};
-};
-eve[5].onmouseout=function(){
-	for (var i=9; i >= 0; i-=1) {
-	  	rm[5].style.color="#5191c1";
-	  	rm[5].style.left="-500px";
-	};
-};
+
 var juti=document.getElementsByClassName("jutidejieshao");
 var dangan=document.getElementsByClassName("dangan");
 var renwu=document.getElementsByClassName("renwu");
 var guanbi=document.getElementsByClassName("guanbi");
 var right=document.getElementById("right");
-var eventBlock=document.getElementById("eventBlock");
+var event1=document.getElementById("event1");
+var event2=document.getElementById("event2");
+var event3=document.getElementById("event3");
+var event4=document.getElementById("event4");
 window.onclick=function(e){
 	var element=document.elementFromPoint(e.clientX,e.clientY);
 	var eI=element.id;
@@ -370,7 +278,12 @@ window.onclick=function(e){
 	}else if (eC[0]=="event"){
 		alert("点什么点，我懒得做了，这里不会有东西的");
 	}else if (eC[0]=='infmt'){
+		var eventBlock=document.getElementsByClassName("eventBlock");
 	  	infmt[0].onclick=function(){
+	  		for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[0].style.color="red";
 			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
@@ -378,11 +291,19 @@ window.onclick=function(e){
 		};
 		infmt[1].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[1].style.color="red";
+			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
 			eventBlock[1].className="eventBlock"
 		};
 		infmt[2].onclick=function(){
+			for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[2].style.color="red";
 			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
@@ -390,9 +311,55 @@ window.onclick=function(e){
 		};
 		infmt[3].onclick=function(){
 			for (var i=0; i < infmt.length; i++) {
+			  infmt[i].style.color="black"
+			};
+			infmt[3].style.color="red";
+			for (var i=0; i < infmt.length; i++) {
 			  eventBlock[i].className="eventNone eventBlock"
 			};
 			eventBlock[3].className="eventBlock"
 		};
 	};
 };
+function findIndex(list, item) {
+	for (let i in list) {
+		if (list[i] == item) {
+			return i;
+	    };
+	};
+	// 没有找到元素返回-1
+	return -1;
+};
+var eveTime=document.getElementsByClassName("eventTime");
+var eveType=document.getElementsByClassName("eventType");
+var eveThing=document.getElementsByClassName("eventThing");
+window.onmouseover=function(ee){
+	var element=document.elementFromPoint(ee.clientX,ee.clientY);
+	var eC=element.classList;
+	if(eC[0]=='event'){
+		var index = findIndex(eve, element);
+		rm[index].style.left='0px';
+		eve[index].onmouseout=function(){
+			rm[index].style.left='-500px';
+		};
+	}else if (eC[0]=='eventTime') {
+		var index = findIndex(eveTime, element);
+		rm[index].style.left='0px';
+		eveTime[index].onmouseout=function(){
+			rm[index].style.left='-500px';
+		};
+	}else if (eC[0]=='eventType') {
+		var index = findIndex(eveType, element);
+		rm[index].style.left='0px';
+		eveType[index].onmouseout=function(){
+			rm[index].style.left='-500px';
+		};
+	}else if (eC[0]=='eventThing') {
+		var index = findIndex(eveThing, element);
+		rm[index].style.left='0px';
+		eveThing[index].onmouseout=function(){
+			rm[index].style.left='-500px';
+		};
+	}
+};
+
