@@ -1,3 +1,19 @@
+var loading=document.getElementById("loading");
+var start=document.getElementById("start");
+var loadingWidth=0;
+loadingTime=setInterval(function(){
+	if (loading.style.width!='534px') {
+		loadingWidth+=6;
+		loading.style.width=loadingWidth+"px";
+		loading.innerHTML=loadingWidth/534*100+'%';
+	}else if(loading.style.width=='534px'){
+		clearInterval(loadingTime);
+		start.id=' ';
+		loading.id=' ';
+		loading.innerHTML=' ';
+	};
+},10);
+
 var n1=document.getElementById("n1");
 var n2=document.getElementById("n2");
 var n3=document.getElementById("n3");
@@ -269,7 +285,7 @@ window.onclick=function(e){
 		var sji=document.getElementsByClassName("shi");
 		sji[eNum].style.display="block";
 	}else if (eC[0]=="guanbi"){
-		right.style.zIndex="9999";
+		right.style.zIndex="9996";
 		for (var i=0; i < juti.length; i++) {
 			if (juti[i].style.display="block") {
 				juti[i].style.display="none";
@@ -362,4 +378,5 @@ window.onmouseover=function(ee){
 		};
 	}
 };
+
 
