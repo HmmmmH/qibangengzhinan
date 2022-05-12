@@ -336,7 +336,7 @@ ol{
 	position: absolute;
 	top: -50px;
 	left: -45px;
-	background-image: url(../img/start.png);
+	background-image: url(../img/start.png) !important; 
 	z-index: 9998;
 }
 #loading{
