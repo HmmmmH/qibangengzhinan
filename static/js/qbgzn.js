@@ -1,5 +1,6 @@
 var loading=document.getElementById("loading");
 var start=document.getElementById("start");
+var all=document.getElementsByTagName("*");
 var loadingWidth=0;
 loadingTime=setInterval(function(){
 	if (loading.style.width!='534px') {
@@ -162,7 +163,7 @@ pg[2].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
-	left[2].style.zIndex="4444";
+	left[2].style.zIndex="4446";
 };
 pg[3].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
@@ -177,7 +178,7 @@ pg[3].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
-	left[3].style.zIndex="4444";
+	left[3].style.zIndex="4446";
 };
 pg[4].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
@@ -258,12 +259,17 @@ var event1=document.getElementById("event1");
 var event2=document.getElementById("event2");
 var event3=document.getElementById("event3");
 var event4=document.getElementById("event4");
+var drag=document.getElementById("drag");
+var container=document.getElementById("container");
+var unit=document.getElementsByClassName("unit");
 window.onclick=function(e){
 	var element=document.elementFromPoint(e.clientX,e.clientY);
 	var eI=element.id;
 	var eC=element.classList;
+	var eT=element.tagName;
 	if (eI[0]=="r"&&eI[1]=="e"&&eI[2]=="n") {
 		right.style.zIndex="0";
+		container.style.zIndex="0";
 		var eIS="";
 		for (var i=0; i < eI.length; i++) {
 			if (i>=5) {
@@ -275,6 +281,7 @@ window.onclick=function(e){
 		xhao[eNum].style.display="block";
 	}else if (eI[0]=="d"&&eI[1]=="a"&&eI[2]=="n") {
 		right.style.zIndex="0";
+		container.style.zIndex="0";
 		var eIS="";
 		for (var i=0; i < eI.length; i++) {
 			if (i>=6) {
@@ -286,6 +293,7 @@ window.onclick=function(e){
 		sji[eNum].style.display="block";
 	}else if (eC[0]=="guanbi"){
 		right.style.zIndex="9996";
+		container.style.zIndex="4445";
 		for (var i=0; i < juti.length; i++) {
 			if (juti[i].style.display="block") {
 				juti[i].style.display="none";
@@ -335,6 +343,17 @@ window.onclick=function(e){
 			};
 			eventBlock[3].className="eventBlock"
 		};
+	}else if (true) {
+        var x=e.clientX+'px';
+        var y=e.clientY+'px';
+        drag.style.left=x;
+        drag.style.top=y;
+        var pX=e.pageX+'px';
+        var pY=e.pageY+'px';
+        for (var i=0; i < unit.length; i++) {
+          unit[i].style.left=pX;
+          unit[i].style.top=pY;
+        };
 	};
 };
 function findIndex(list, item) {
@@ -351,6 +370,7 @@ var eveType=document.getElementsByClassName("eventType");
 var eveThing=document.getElementsByClassName("eventThing");
 window.onmouseover=function(ee){
 	var element=document.elementFromPoint(ee.clientX,ee.clientY);
+	var eI=element.id;
 	var eC=element.classList;
 	if(eC[0]=='event'){
 		var index = findIndex(eve, element);
@@ -376,7 +396,139 @@ window.onmouseover=function(ee){
 		eveThing[index].onmouseout=function(){
 			rm[index].style.left='-500px';
 		};
-	}
+	}else if (true) {
+        var x=ee.clientX+'px';
+        var y=ee.clientY+'px';
+        drag.style.left=x;
+        drag.style.top=y;
+        var pX=ee.pageX+'px';
+        var pY=ee.pageY+'px';
+        for (var i=0; i < unit.length; i++) {
+          unit[i].style.left=pX;
+          unit[i].style.top=pY;
+        };
+	};
 };
 
 
+
+(function(win, lib) {
+	
+	var doc = win.document;
+	var docEl = doc.documentElement;
+	var metaEl = doc.querySelector('meta[name="viewport"]');
+	var flexibleEl = doc.querySelector('meta[name="flexible"]');
+	var dpr = 0;
+	var scale = 0;
+	var tid;
+	var flexible = lib.flexible || (lib.flexible = {});
+
+	if(metaEl) {
+		console.warn('将根据已有的meta标签来设置缩放比例');
+		var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+		if(match) {
+			scale = parseFloat(match[1]);
+			dpr = parseInt(1 / scale);
+		}
+	} else if(flexibleEl) {
+		var content = flexibleEl.getAttribute('content');
+		if(content) {
+			var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+			var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+			if(initialDpr) {
+				dpr = parseFloat(initialDpr[1]);
+				scale = parseFloat((1 / dpr).toFixed(2));
+			}
+			if(maximumDpr) {
+				dpr = parseFloat(maximumDpr[1]);
+				scale = parseFloat((1 / dpr).toFixed(2));
+			}
+		}
+	}
+
+	if(!dpr && !scale) {
+		var isAndroid = win.navigator.appVersion.match(/android/gi);
+		var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+		var devicePixelRatio = win.devicePixelRatio;
+		if(isIPhone) {
+			// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+			if(devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+				dpr = 3;
+			} else if(devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+				dpr = 2;
+			} else {
+				dpr = 1;
+			}
+		} else {
+			// 其他设备下，仍旧使用1倍的方案
+			dpr = 1;
+		}
+		scale = 1 / dpr;
+	}
+
+	docEl.setAttribute('data-dpr', dpr);
+	if(!metaEl) {
+		metaEl = doc.createElement('meta');
+		metaEl.setAttribute('name', 'viewport');
+		metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		if(docEl.firstElementChild) {
+			docEl.firstElementChild.appendChild(metaEl);
+		} else {
+			var wrap = doc.createElement('div');
+			wrap.appendChild(metaEl);
+			doc.write(wrap.innerHTML);
+		}
+	}
+
+	function refreshRem() {
+		var width = docEl.getBoundingClientRect().width;
+		if(width / dpr > 540) {
+			width = 540 * dpr;
+		}
+		//width=320;//按照4的尺寸计算
+		var rem = width / 10;
+		docEl.style.fontSize = rem + 'px';
+		flexible.rem = win.rem = rem;
+	}
+
+	win.addEventListener('resize', function() {
+		clearTimeout(tid);
+		tid = setTimeout(refreshRem, 300);
+	}, false);
+	win.addEventListener('pageshow', function(e) {
+		if(e.persisted) {
+			clearTimeout(tid);
+			tid = setTimeout(refreshRem, 300);
+		}
+	}, false);
+
+	if(doc.readyState === 'complete') {
+		//      doc.body.style.fontSize = 12 * dpr + 'px';
+		//      doc.body.className+=' show';
+	} else {
+		doc.addEventListener('DOMContentLoaded', function(e) {
+			//          doc.body.style.fontSize = 12 * dpr + 'px';
+			//          doc.body.className+=' show';
+		}, false);
+	}
+
+	refreshRem();
+
+	flexible.dpr = win.dpr = dpr;
+	flexible.refreshRem = refreshRem;
+	flexible.rem2px = function(d) {
+		var val = parseFloat(d) * this.rem;
+		if(typeof d === 'string' && d.match(/rem$/)) {
+			val += 'px';
+		}
+		return val;
+	}
+	flexible.px2rem = function(d) {
+		var val = parseFloat(d) / this.rem;
+		if(typeof d === 'string' && d.match(/px$/)) {
+			val += 'rem';
+		}
+		return val;
+	}
+
+})(window, window['lib'] || (window['lib'] = {}));
