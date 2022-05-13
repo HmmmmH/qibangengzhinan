@@ -1,6 +1,9 @@
 var loading=document.getElementById("loading");
 var start=document.getElementById("start");
 var all=document.getElementsByTagName("*");
+var drag=document.getElementById("drag");
+var container=document.getElementById("container");
+var unit=document.getElementsByClassName("unit");
 var loadingWidth=0;
 loadingTime=setInterval(function(){
 	if (loading.style.width!='534px') {
@@ -14,6 +17,22 @@ loadingTime=setInterval(function(){
 		loading.innerHTML=' ';
 	};
 },10);
+
+
+setInterval(function(){
+	drag.style.background="url(static/img/spiderClose.png) no-repeat";
+	setInterval(function(){
+		drag.style.background="url(static/img/spider.png) no-repeat";
+	},2200);
+},3000);
+
+drag.onmouseover=function(){
+	drag.style.background="url(static/img/spiderClose.png) no-repeat";
+	drag.innerHTML="你干嘛，嗯哼哼~";
+};
+drag.onmouseout=function(){
+	drag.innerHTML="";
+};
 
 var n1=document.getElementById("n1");
 var n2=document.getElementById("n2");
@@ -259,9 +278,7 @@ var event1=document.getElementById("event1");
 var event2=document.getElementById("event2");
 var event3=document.getElementById("event3");
 var event4=document.getElementById("event4");
-var drag=document.getElementById("drag");
-var container=document.getElementById("container");
-var unit=document.getElementsByClassName("unit");
+
 window.onclick=function(e){
 	var element=document.elementFromPoint(e.clientX,e.clientY);
 	var eI=element.id;

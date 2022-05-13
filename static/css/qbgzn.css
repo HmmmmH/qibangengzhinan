@@ -331,6 +331,7 @@ ol{
 }
 #start{
 	transition: 0s;
+	background-color: #5191C1;
 	width: 1370px;
 	height: 850px;
 	position: absolute;
@@ -366,9 +367,10 @@ ol{
 	width: 60px;
 	height: 60px;
 	top: -50px;
-	left: -45;
-	border: 1px solid black;
+	left: -45px;
+	background: url(../img/spider.png) no-repeat;
 	z-index: 4448;
+	transition: all 3s !important;
 }
 
 .unit {
