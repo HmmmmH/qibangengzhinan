@@ -7,6 +7,7 @@ body{
 	font-family: sans-serif;
 	width: 1340px;
 	height: 750px;
+	background-color: #5191C1;
 }
 #title{
 	width: 170px;
@@ -166,6 +167,7 @@ body{
 	position: absolute;
 	width: 1340px;
 	height: 800px;
+	background: #5191C1;
 }
 #information{
 	font-family: "SansMedium";
