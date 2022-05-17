@@ -353,17 +353,6 @@ ol{
 	background-color: yellow;
 	border-radius: 61px;
 }
-#container {
-	margin: auto;
-	position: absolute;
-	top: 83px;
-	left: 691px;
-	overflow: hidden;
-	height: 100%;
-	width: 520px;
-	z-index: 4445;
-}
-
 #drag {
 	position: absolute;
 	width: 60px;
@@ -375,24 +364,13 @@ ol{
 	transition: all 3s !important;
 }
 
-.unit {
-	width: 60px;
-	height: 60px;
-	margin: .1rem;
-	border: 1px solid black;
-	float: left;
-}
-
-.unit.select {
-	background: yellow;
-}
-
-.unit_container {
-	margin: 1.2rem .8rem;
-}
 #right{
 	transition: z-index 0s;
 }
 .left{
 	transition: z-index 0s;
+}
+.amazingad{
+	text-decoration: overline underline line-through;
+	color: red;
 }

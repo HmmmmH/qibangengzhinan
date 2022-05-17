@@ -2,8 +2,6 @@ var loading=document.getElementById("loading");
 var start=document.getElementById("start");
 var all=document.getElementsByTagName("*");
 var drag=document.getElementById("drag");
-var container=document.getElementById("container");
-var unit=document.getElementsByClassName("unit");
 var loadingWidth=0;
 loadingTime=setInterval(function(){
 	if (loading.style.width!='534px') {
@@ -38,28 +36,27 @@ var n1=document.getElementById("n1");
 var n2=document.getElementById("n2");
 var n3=document.getElementById("n3");
 var n=[n1,n2,n3];
-var clickNum=0;
+var clickNum1=0;
+var clickNum2=0;
+var clickNum3=0;
 n[0].onclick=function(){
 	for (var i=0; i < n.length; i++) {
 	  if (i!=0) {
 	  	n[i].style.textDecoration="none";
 	  } else{n[i].style.textDecoration="underline skyblue";};
 	};
-	if (clickNum==0){
+	if (clickNum1==0){
 		alert('我这里没有视频，别点这里');
-		clickNum+=1;
-	}else if (clickNum==1||clickNum==2){
-		alert('我这里也没有视频，别点这里');
-		clickNum+=1;
-	}else if (clickNum>=3&&clickNum<=6){
+		clickNum1+=1;
+	}else if (clickNum1==1){
 		alert('我不是说过没有视频了吗，别再点这里了');
-		clickNum+=1;
-	}else if (clickNum>6&&clickNum<=9){
+		clickNum1+=1;
+	}else if (clickNum1==3){
 		alert('你是不是有什么大病');
-		clickNum+=1;
+		clickNum1+=1;
 	}else{
 		alert("彳亍，我走");
-		n[0].innerHTML="　"
+		n[0].innerHTML=""
 	};
 };
 n[1].onclick=function(){
@@ -68,21 +65,18 @@ n[1].onclick=function(){
 	  	n[i].style.textDecoration="none";
 	  } else{n[i].style.textDecoration="underline skyblue";};
 	};
-	if (clickNum==0){
+	if (clickNum2==0){
 		alert('我这里没有视频，别点这里');
-		clickNum+=1;
-	}else if (clickNum==1||clickNum==2){
-		alert('我这里也没有视频，别点这里');
-		clickNum+=1;
-	}else if (clickNum>=3&&clickNum<=6){
+		clickNum2+=1;
+	}else if (clickNum2==1){
 		alert('我不是说过没有视频了吗，别再点这里了');
-		clickNum+=1;
-	}else if (clickNum>6&&clickNum<=9){
+		clickNum2+=1;
+	}else if (clickNum2==3){
 		alert('你是不是有什么大病');
-		clickNum+=1;
+		clickNum2+=1;
 	}else{
 		alert("彳亍，我走");
-		n[1].innerHTML="　"
+		n[1].innerHTML=""
 	};
 };
 n[2].onclick=function(){
@@ -91,21 +85,18 @@ n[2].onclick=function(){
 	  	n[i].style.textDecoration="none";
 	  } else{n[i].style.textDecoration="underline skyblue";};
 	};
-	if (clickNum==0){
+	if (clickNum3==0){
 		alert('我这里没有视频，别点这里');
-		clickNum+=1;
-	}else if (clickNum==1||clickNum==2){
-		alert('我这里也没有视频，别点这里');
-		clickNum+=1;
-	}else if (clickNum>=3&&clickNum<=6){
+		clickNum3+=1;
+	}else if (clickNum3==1){
 		alert('我不是说过没有视频了吗，别再点这里了');
-		clickNum+=1;
-	}else if (clickNum>6&&clickNum<=9){
+		clickNum3+=1;
+	}else if (clickNum3==3){
 		alert('你是不是有什么大病');
-		clickNum+=1;
+		clickNum3+=1;
 	}else{
 		alert("彳亍，我走");
-		n[2].innerHTML="　"
+		n[2].innerHTML=""
 	};
 };
 
@@ -365,12 +356,6 @@ window.onclick=function(e){
         var y=e.clientY+'px';
         drag.style.left=x;
         drag.style.top=y;
-        var pX=e.pageX+'px';
-        var pY=e.pageY+'px';
-        for (var i=0; i < unit.length; i++) {
-          unit[i].style.left=pX;
-          unit[i].style.top=pY;
-        };
 	};
 };
 function findIndex(list, item) {
@@ -418,134 +403,5 @@ window.onmouseover=function(ee){
         var y=ee.clientY+'px';
         drag.style.left=x;
         drag.style.top=y;
-        var pX=ee.pageX+'px';
-        var pY=ee.pageY+'px';
-        for (var i=0; i < unit.length; i++) {
-          unit[i].style.left=pX;
-          unit[i].style.top=pY;
-        };
 	};
 };
-
-
-
-(function(win, lib) {
-	
-	var doc = win.document;
-	var docEl = doc.documentElement;
-	var metaEl = doc.querySelector('meta[name="viewport"]');
-	var flexibleEl = doc.querySelector('meta[name="flexible"]');
-	var dpr = 0;
-	var scale = 0;
-	var tid;
-	var flexible = lib.flexible || (lib.flexible = {});
-
-	if(metaEl) {
-		console.warn('将根据已有的meta标签来设置缩放比例');
-		var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
-		if(match) {
-			scale = parseFloat(match[1]);
-			dpr = parseInt(1 / scale);
-		}
-	} else if(flexibleEl) {
-		var content = flexibleEl.getAttribute('content');
-		if(content) {
-			var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
-			var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
-			if(initialDpr) {
-				dpr = parseFloat(initialDpr[1]);
-				scale = parseFloat((1 / dpr).toFixed(2));
-			}
-			if(maximumDpr) {
-				dpr = parseFloat(maximumDpr[1]);
-				scale = parseFloat((1 / dpr).toFixed(2));
-			}
-		}
-	}
-
-	if(!dpr && !scale) {
-		var isAndroid = win.navigator.appVersion.match(/android/gi);
-		var isIPhone = win.navigator.appVersion.match(/iphone/gi);
-		var devicePixelRatio = win.devicePixelRatio;
-		if(isIPhone) {
-			// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
-			if(devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
-				dpr = 3;
-			} else if(devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
-				dpr = 2;
-			} else {
-				dpr = 1;
-			}
-		} else {
-			// 其他设备下，仍旧使用1倍的方案
-			dpr = 1;
-		}
-		scale = 1 / dpr;
-	}
-
-	docEl.setAttribute('data-dpr', dpr);
-	if(!metaEl) {
-		metaEl = doc.createElement('meta');
-		metaEl.setAttribute('name', 'viewport');
-		metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
-		if(docEl.firstElementChild) {
-			docEl.firstElementChild.appendChild(metaEl);
-		} else {
-			var wrap = doc.createElement('div');
-			wrap.appendChild(metaEl);
-			doc.write(wrap.innerHTML);
-		}
-	}
-
-	function refreshRem() {
-		var width = docEl.getBoundingClientRect().width;
-		if(width / dpr > 540) {
-			width = 540 * dpr;
-		}
-		//width=320;//按照4的尺寸计算
-		var rem = width / 10;
-		docEl.style.fontSize = rem + 'px';
-		flexible.rem = win.rem = rem;
-	}
-
-	win.addEventListener('resize', function() {
-		clearTimeout(tid);
-		tid = setTimeout(refreshRem, 300);
-	}, false);
-	win.addEventListener('pageshow', function(e) {
-		if(e.persisted) {
-			clearTimeout(tid);
-			tid = setTimeout(refreshRem, 300);
-		}
-	}, false);
-
-	if(doc.readyState === 'complete') {
-		//      doc.body.style.fontSize = 12 * dpr + 'px';
-		//      doc.body.className+=' show';
-	} else {
-		doc.addEventListener('DOMContentLoaded', function(e) {
-			//          doc.body.style.fontSize = 12 * dpr + 'px';
-			//          doc.body.className+=' show';
-		}, false);
-	}
-
-	refreshRem();
-
-	flexible.dpr = win.dpr = dpr;
-	flexible.refreshRem = refreshRem;
-	flexible.rem2px = function(d) {
-		var val = parseFloat(d) * this.rem;
-		if(typeof d === 'string' && d.match(/rem$/)) {
-			val += 'px';
-		}
-		return val;
-	}
-	flexible.px2rem = function(d) {
-		var val = parseFloat(d) / this.rem;
-		if(typeof d === 'string' && d.match(/px$/)) {
-			val += 'rem';
-		}
-		return val;
-	}
-
-})(window, window['lib'] || (window['lib'] = {}));
