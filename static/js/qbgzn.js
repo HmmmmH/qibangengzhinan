@@ -277,7 +277,6 @@ window.onclick=function(e){
 	var eT=element.tagName;
 	if (eI[0]=="r"&&eI[1]=="e"&&eI[2]=="n") {
 		right.style.zIndex="0";
-		container.style.zIndex="0";
 		var eIS="";
 		for (var i=0; i < eI.length; i++) {
 			if (i>=5) {
@@ -289,7 +288,6 @@ window.onclick=function(e){
 		xhao[eNum].style.display="block";
 	}else if (eI[0]=="d"&&eI[1]=="a"&&eI[2]=="n") {
 		right.style.zIndex="0";
-		container.style.zIndex="0";
 		var eIS="";
 		for (var i=0; i < eI.length; i++) {
 			if (i>=6) {
@@ -301,7 +299,6 @@ window.onclick=function(e){
 		sji[eNum].style.display="block";
 	}else if (eC[0]=="guanbi"){
 		right.style.zIndex="9996";
-		container.style.zIndex="4445";
 		for (var i=0; i < juti.length; i++) {
 			if (juti[i].style.display="block") {
 				juti[i].style.display="none";
