@@ -9,6 +9,10 @@ body{
 	height: 750px;
 	background-color: #5191C1;
 }
+.titleHerf{
+	display: inline-block;
+	width: 170px;
+}
 #title{
 	width: 170px;
 }
@@ -310,6 +314,9 @@ ol{
 	left: 54px;
 	top: 50px;
 	z-index: 9999;
+}
+.ad{
+	display: none;
 }
 .guanbi{
 	position: absolute;

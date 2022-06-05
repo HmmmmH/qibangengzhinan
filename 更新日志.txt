@@ -34,6 +34,10 @@
 	1.优化了错别字，添加了《狗屁膏药》
 	2.修复了logo图片点击刷新范围过大的BUG
 	3.移除了herobrine
+2022.6.5²/5
+	1.增加了live2d
+	2.增加了live2d模型无法加载的BUG
+	3.移除了herobrine
 
 以下是某个神奇群聊中的群公告：
 赛高泥high铁鸭子哒！wryyyyyyyyyyyyyyyyyyy！
