@@ -143,6 +143,7 @@ pg[0].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
+	zk.style.zIndex="0";
 	left[0].style.zIndex="4444";
 };
 pg[1].onclick=function(){
@@ -158,6 +159,7 @@ pg[1].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
+	zk.style.zIndex="0";
 	left[1].style.zIndex="4444";
 };
 pg[2].onclick=function(){
@@ -173,7 +175,8 @@ pg[2].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
-	left[2].style.zIndex="4446";
+	zk.style.zIndex="0";
+	left[2].style.zIndex="4444";
 };
 pg[3].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
@@ -188,7 +191,8 @@ pg[3].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
-	left[3].style.zIndex="4446";
+	zk.style.zIndex="0";
+	left[3].style.zIndex="4444";
 };
 pg[4].onclick=function(){
 	for (var j=0; j < pg.length; j++) {
@@ -203,6 +207,7 @@ pg[4].onclick=function(){
 	for (var j=0; j < left.length; j++){
 		left[j].style.zIndex="0";
 	};
+	zk.style.zIndex="0";
 	left[4].style.zIndex="4444";
 };
 
@@ -216,7 +221,7 @@ var photo4=document.getElementById("p4");
 var photos=[photo1,photo2,photo3,photo4];
 var photoNum=0;
 var time=1;
-
+//动图
 setInterval(function(){
 	if (photoNum<3) {
 		timer=setInterval(function(){
@@ -257,24 +262,41 @@ setInterval(function(){
 	};
 },5000);
 
+//获取公告栏元素
 var eve=document.getElementsByClassName("event");
 var rm=document.getElementsByClassName("readMore");
-
+//获取档案元素
 var juti=document.getElementsByClassName("jutidejieshao");
 var dangan=document.getElementsByClassName("dangan");
 var renwu=document.getElementsByClassName("renwu");
 var guanbi=document.getElementsByClassName("guanbi");
+
+var zk=document.getElementById("zk");
+var subject=document.getElementsByClassName("subject");
+var Chinese=document.getElementById("Chinese");
+var math=document.getElementById("math");
+var English=document.getElementById("English");
+var physics=document.getElementById("physics");
+var chemistry=document.getElementById("chemistry");
+var sizheng=document.getElementById("sizheng");
+var nCS=document.getElementsByClassName("notChosenSubject");
+
 var right=document.getElementById("right");
+
 var event1=document.getElementById("event1");
 var event2=document.getElementById("event2");
 var event3=document.getElementById("event3");
 var event4=document.getElementById("event4");
 
+var door=document.getElementById("door");
+
+//鼠标点击事件
 window.onclick=function(e){
 	var element=document.elementFromPoint(e.clientX,e.clientY);
 	var eI=element.id;
 	var eC=element.classList;
 	var eT=element.tagName;
+	//人物档案弹窗
 	if (eI[0]=="r"&&eI[1]=="e"&&eI[2]=="n") {
 		right.style.zIndex="0";
 		var eIS="";
@@ -286,7 +308,8 @@ window.onclick=function(e){
 		var eNum=Number(eIS)-1;
 		var xhao=document.getElementsByClassName("hao");
 		xhao[eNum].style.display="block";
-	}else if (eI[0]=="d"&&eI[1]=="a"&&eI[2]=="n") {
+	}//事件档案弹窗
+	else if (eI[0]=="d"&&eI[1]=="a"&&eI[2]=="n") {
 		right.style.zIndex="0";
 		var eIS="";
 		for (var i=0; i < eI.length; i++) {
@@ -297,16 +320,19 @@ window.onclick=function(e){
 		var eNum=Number(eIS)-1;
 		var sji=document.getElementsByClassName("shi");
 		sji[eNum].style.display="block";
-	}else if (eC[0]=="guanbi"){
+	}//关闭弹窗
+	else if (eC[0]=="guanbi"){
 		right.style.zIndex="9996";
 		for (var i=0; i < juti.length; i++) {
 			if (juti[i].style.display="block") {
 				juti[i].style.display="none";
 			};
 		};
-	}else if (eC[0]=="event"){
+	}//公告栏点击
+	else if (eC[0]=="event"){
 		alert("点什么点，我懒得做了，这里不会有东西的");
-	}else if (eC[0]=='infmt'){
+	}//公告栏选择
+	else if (eC[0]=='infmt'){
 		var eventBlock=document.getElementsByClassName("eventBlock");
 	  	infmt[0].onclick=function(){
 	  		for (var i=0; i < infmt.length; i++) {
@@ -348,13 +374,66 @@ window.onclick=function(e){
 			};
 			eventBlock[3].className="eventBlock"
 		};
-	}else if (true) {
+	}//复习资料
+	else if(eC[0]=="subject"){
+		var chosen=document.getElementById("chosen");
+		var cS=document.getElementsByClassName("chosenSubject");
+		subject[0].onclick=function(){
+			chosen.id="";
+			subject[0].id="chosen";
+			cS[0].className="notChosenSubject";
+			Chinese.className="chosenSubject";
+		};
+		subject[1].onclick=function(){
+			chosen.id="";
+			subject[1].id="chosen";
+			cS[0].className="notChosenSubject";
+			math.className="chosenSubject";
+		};
+		subject[2].onclick=function(){
+			chosen.id="";
+			subject[2].id="chosen";
+			cS[0].className="notChosenSubject";
+			English.className="chosenSubject";
+		};
+		subject[3].onclick=function(){
+			chosen.id="";
+			subject[3].id="chosen";
+			cS[0].className="notChosenSubject";
+			physics.className="chosenSubject";
+		};
+		subject[4].onclick=function(){
+			chosen.id="";
+			subject[4].id="chosen";
+			cS[0].className="notChosenSubject";
+			chemistry.className="chosenSubject";
+		};
+		subject[5].onclick=function(){
+			chosen.id="";
+			subject[5].id="chosen";
+			cS[0].className="notChosenSubject";
+			sizheng.className="chosenSubject";
+		};
+	}//复习资料入口
+	else if (eI=="door") {
+		for (var i=0; i < pg.length; i++) {
+			pg[i].style.zIndex="0";
+		};
+		zk.style.zIndex="4444";
+		for (var j=0; j < pg.length; j++) {
+			pg[j].innerHTML=pgList[j];
+			pg[j].style.removeProperty('color');
+			pg[0].style.color='black';
+	  	};
+	}
+	else if (true) {
         var x=e.clientX+'px';
         var y=e.clientY+'px';
         drag.style.left=x;
         drag.style.top=y;
 	};
 };
+//查找元素在列表中位置
 function findIndex(list, item) {
 	for (let i in list) {
 		if (list[i] == item) {
@@ -367,6 +446,7 @@ function findIndex(list, item) {
 var eveTime=document.getElementsByClassName("eventTime");
 var eveType=document.getElementsByClassName("eventType");
 var eveThing=document.getElementsByClassName("eventThing");
+//鼠标悬停事件
 window.onmouseover=function(ee){
 	var element=document.elementFromPoint(ee.clientX,ee.clientY);
 	var eI=element.id;
@@ -402,3 +482,10 @@ window.onmouseover=function(ee){
         drag.style.top=y;
 	};
 };
+//门开关
+door.onmouseover=function(){
+	door.style.backgroundImage="url(static/img/opendoor.png)"
+}
+door.onmouseout=function(){
+	door.style.backgroundImage="url(static/img/door.png)"
+}

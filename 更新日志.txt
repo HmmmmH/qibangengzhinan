@@ -38,6 +38,9 @@
 	1.增加了live2d
 	2.增加了live2d模型无法加载的BUG
 	3.移除了herobrine
+2022.7.同上
+	1.鸽了一个月的爷是屑
+	2.更新了中考专用模块（入口在首页那个门）
 
 以下是某个神奇群聊中的群公告：
 赛高泥high铁鸭子哒！wryyyyyyyyyyyyyyyyyyy！

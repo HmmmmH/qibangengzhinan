@@ -384,3 +384,29 @@ ol{
 .titleHerf{
 	width: 170px;
 }
+#door{
+	display: inline-block;
+	width: 62px;
+	height: 118px;
+	background-image: url(../img/door.png)
+}
+.chosenSubject{
+	display: inline-block;
+}
+.subject{
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+}
+#chosen{
+	color: red;
+}
+.zkwenj{
+	position: absolute;
+}
+ul{
+	list-style: none
+}
+.notChosenSubject{
+	display: none
+}
