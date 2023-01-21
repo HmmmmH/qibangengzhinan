@@ -35,6 +35,7 @@ drag.onmouseout=function(){
 var n1=document.getElementById("n1");
 var n2=document.getElementById("n2");
 var n3=document.getElementById("n3");
+var nY=document.getElementById("happyNewYear");
 var n=[n1,n2,n3];
 var clickNum1=0;
 var clickNum2=0;
@@ -45,19 +46,7 @@ n[0].onclick=function(){
 	  	n[i].style.textDecoration="none";
 	  } else{n[i].style.textDecoration="underline skyblue";};
 	};
-	if (clickNum1==0){
-		alert('我这里没有视频，别点这里');
-		clickNum1+=1;
-	}else if (clickNum1==1){
-		alert('我不是说过没有视频了吗，别再点这里了');
-		clickNum1+=1;
-	}else if (clickNum1==3){
-		alert('你是不是有什么大病');
-		clickNum1+=1;
-	}else{
-		alert("彳亍，我走");
-		n[0].innerHTML=""
-	};
+	nY.style.display="block"
 };
 n[1].onclick=function(){
 	for (var i=0; i < n.length; i++) {
@@ -488,4 +477,11 @@ door.onmouseover=function(){
 }
 door.onmouseout=function(){
 	door.style.backgroundImage="url(static/img/door.png)"
-}
+};
+//七班春晚关闭
+var cY=document.getElementById("closeNew");
+var nV=document.getElementById("newYearVideo");
+cY.onclick=function(){
+	nY.style.display="none";
+	nV.pause();
+};
