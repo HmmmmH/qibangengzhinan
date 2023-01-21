@@ -414,3 +414,23 @@ ul{
 	display: block;
 	font-size: 20px;
 }
+#happyNewYear{
+	display: none;
+	position: absolute;
+	top: -50px;
+	left: -45px;
+	z-index: 9999;
+	background-color: rgba(255,255,255,0.3);
+	width: 1404px;
+	height: 800px;
+}
+#newYearVideo{
+	position: absolute;
+	top: -24px;
+	left: 77px;
+}
+#closeNew{
+	position: absolute;
+	left: 1310px;
+	top: -0px;
+}
